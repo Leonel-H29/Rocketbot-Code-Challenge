@@ -130,4 +130,5 @@ dist
 .pnp.*
 
 # Prisma
-/prisma
+/prisma/migrations
+/prisma/dev.db

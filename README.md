@@ -40,6 +40,7 @@ To set up the database and create tables using Prisma, follow these steps:
      surname  String
      username String  @unique
      password String
+     createdAt DateTime  @default(now())
    }
    ```
 
@@ -87,12 +88,12 @@ The hexagonal architecture in this project is divided into three main layers:
 
 ```
     +-------------------+
-    |   Application     |
+    |   Domain          |
     +-------------------+
             ^
             |
     +-------------------+
-    |      Domain       |
+    |  Application      |
     +-------------------+
             ^
             |

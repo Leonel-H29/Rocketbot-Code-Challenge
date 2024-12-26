@@ -1,5 +1,8 @@
 import { Router } from 'express';
 import AuthController from '../controllers/auth.controller.js';
+import { validateRegistration } from '../middlewares/validateRegistration.middleware.js';
+import { validateTokenProfile } from '../middlewares/validateTokenProfile.middleware.js';
+import { validateCredentialsLogin } from '../middlewares/validateCredentialsLogin.middleware.js';
 
 const router = Router();
 /**
@@ -37,7 +40,7 @@ const router = Router();
  *       400:
  *         description: Request error
  */
-router.post('/register', AuthController.register);
+router.post('/register', validateRegistration, AuthController.register);
 /**
  * @swagger
  * /login:
@@ -64,7 +67,7 @@ router.post('/register', AuthController.register);
  *       401:
  *         description: Unauthorized, invalid login credentials
  */
-router.post('/login', AuthController.login);
+router.post('/login', validateCredentialsLogin, AuthController.login);
 
 /**
  * @swagger
@@ -80,6 +83,6 @@ router.post('/login', AuthController.login);
  *       401:
  *         description: Unauthorized, token missing or invalid
  */
-router.get('/profile', AuthController.profile);
+router.get('/profile', validateTokenProfile, AuthController.profile);
 
 export default router;
