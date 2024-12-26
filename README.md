@@ -159,7 +159,7 @@ Each endpoint in the API performs specific operations, and they require certain 
 
 - `GET /api/profile`: Get the profile of the logged-in user.
 
-  _Parámetros:_
+  _Header:_
 
   A Bearer authentication token is required in the request header.
 
