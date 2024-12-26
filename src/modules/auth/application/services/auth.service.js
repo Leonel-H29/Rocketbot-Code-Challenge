@@ -24,7 +24,8 @@ class AuthService {
     }
 
     const token = generateToken(user);
-    return { user, token };
+    const { password: _, ...userWithoutPassword } = user;
+    return { user: userWithoutPassword, token };
   }
 
   async getUserProfile(userId) {
