@@ -17,12 +17,15 @@ const router = Router();
  *             required:
  *               - name
  *               - surname
+ *               - email
  *               - username
  *               - password
  *             properties:
  *               name:
  *                 type: string
  *               surname:
+ *                 type: string
+ *               email:
  *                 type: string
  *               username:
  *                 type: string
