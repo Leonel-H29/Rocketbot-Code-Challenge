@@ -55,9 +55,10 @@ To set up the database and create tables using Prisma, follow these steps:
 
 ## Enviroment variables needs
 
-```
+```.env
 DATABASE_URL="file:./dev.db"
 JWT_SECRET=<YOUR_KEY>
+PORT:<PORT_NUMBER> //Optional
 ```
 
 ## Running the Project
@@ -72,7 +73,7 @@ To run the project, execute the following commands:
    ```bash
    npm run start
    ```
-3. Access the API at `http://localhost:3000` and the Swagger documentation at `http://localhost:3000/swagger`.
+3. Access the API at `http://localhost:<PORT>/api` and the Swagger documentation at `http://localhost:<PORT>/swagger`, where `<PORT>` is the default port number 3000 or the one you have set in your `.env` file.
 
 ## Hexagonal Architecture Overview
 

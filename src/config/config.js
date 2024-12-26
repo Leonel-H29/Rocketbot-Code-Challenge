@@ -11,5 +11,6 @@ dotenv.config({
 });
 
 const jwtSecret = get(process.env, 'JWT_SECRET');
+const port = Number(get(process.env, 'PORT', 3000));
 
-export { jwtSecret };
+export { jwtSecret, port };

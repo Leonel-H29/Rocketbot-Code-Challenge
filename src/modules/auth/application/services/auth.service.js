@@ -33,7 +33,6 @@ class AuthService {
     if (!user) {
       throw new Error('User not found');
     }
-    // Exclude password and other sensitive fields from the user object
     const { password, ...userWithoutPassword } = user;
     return userWithoutPassword;
   }
