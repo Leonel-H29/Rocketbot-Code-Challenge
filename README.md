@@ -4,7 +4,7 @@ _Node version:_ >= 18
 
 ## Project Overview
 
-Rocketbot Code Challenge is a project designed to showcase the implementation of a hexagonal architecture in a JavaScript application, adhering to SOLID principles. The application features an object-oriented design and utilizes Prisma as an ORM to interact with a SQLite database. The project includes a user model with fields for name, surname, username, and password. All functionalities are complete, data validations are in place, and the API is documented using Swagger.
+This project involves creating an authentication API using Node.js and JavaScript. It features a public main route (GET), a registration endpoint (/register, POST), a login endpoint (/login, POST), and a protected route (/profile, GET) that requires a valid login, returning non-sensitive user info. Unauthorized access prompts an appropriate response status. Successful logins generate a 1-hour expiry JWT, required in the header for accessing the protected route, with validation to prevent access upon expiration.
 
 ## Setting Up the Database with Prisma & SQLite
 
